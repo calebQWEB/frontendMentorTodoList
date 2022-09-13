@@ -1,0 +1,247 @@
+@use '../custom'as *;
+
+.main-2 {
+    background: $lightmodeBg;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+
+    background-image: url(/assets/image/bg-desktop-light.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding: 3rem 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .todo__container {
+
+
+        .todo__header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            h1 {
+                font-size: 40px;
+                font-weight: 700;
+                color: $darkmodebg;
+                letter-spacing: 3px;
+            }
+        }
+
+        .todo__creation {
+            height: 100%;
+            width: 450px;
+            padding: 1.7rem 1rem;
+            background-color: $lightmodeFormbg;
+            border-radius: 5px;
+            margin-bottom: 1.5rem;
+
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 1.5rem;
+
+            .button {
+                position: relative;
+                height: 15px;
+                width: 15px;
+                border-radius: 50%;
+                background-color: transparent;
+                border: 1px solid $lightmodetextHover;
+                cursor: pointer;
+
+                .checkbtn {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+
+                &:focus {
+                    background-color: $BrightBlue;
+                }
+            }
+
+            input {
+                border: none;
+                background-color: transparent;
+                outline: none;
+                font-size: 16px;
+                color: $lightmodetext2;
+                font-family: 'Josefin Sans', sans-serif;
+
+                &::placeholder {
+                    font-size: 16px;
+                    color: $lightmodetextHover;
+                    font-family: 'Josefin Sans', sans-serif;
+                }
+
+            }
+        }
+
+        .todo__main {
+            background-color: $lightmodeFormbg;
+            border-radius: 5px 5px 0 0;
+
+            .todo__main-container {
+                display: flex;
+                align-items: center;
+                gap: 1.5rem;
+
+                .circle {
+                    position: relative;
+                    height: 12px;
+                    width: 15px;
+                    border-radius: 50%;
+                    margin-left: 1rem;
+                    background-color: transparent;
+                    border: 1px solid $lightmodetextHover;
+                    cursor: pointer;
+
+                    .check {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+
+                .todo__main-content {
+                    font-family: 'Josefin Sans', sans-serif;
+                    width: 100%;
+                    color: $lightmodetext2;
+                    cursor: pointer;
+
+                    .todo__main-text {
+                        font-family: 'Josefin Sans', sans-serif;
+                        color: $lightmodetext2;
+                        
+                    }
+                }
+
+                .todo__main-controls {
+                    
+
+                     h1 {
+                        font-weight: 500;
+                        color: $VeryDarkGrayishBlue2;
+                        margin-right: 1rem;
+                        cursor: pointer;
+                        opacity: 0;
+                     }
+                }
+            }
+        }
+
+        .todo__completed {
+            background-color: $lightmodeFormbg;
+            border-radius: 5px 5px 0 0;
+            padding: 1.5rem;
+
+            .newPara {
+                font-family: 'Josefin Sans', sans-serif;
+                font-size: 18px;
+                color: $lightmodetext2;
+            }
+        }
+
+        .todo__links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.3rem;
+            padding: 0 1rem;
+
+            color: $lightmodetext2;
+            text-decoration: none;
+            background-color: $lightmodeFormbg;
+            border-radius: 0 0 5px 5px;
+
+
+            a {
+                color: $lightmodetext2;
+                cursor: pointer;
+                text-decoration: none;
+
+                &:focus {
+                    color: $BrightBlue;
+                }
+            }
+
+
+            #all {
+                margin-left: auto;
+            }
+
+            #complete {
+                margin-right: auto;
+            }
+
+            #clear {
+                cursor: pointer;
+            }
+        }
+    }
+
+    .toggle-circle {
+        background-image: url(/assets/image/icon-check.svg);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 18px;
+        width: 18px;
+        border-radius: 50%;
+        border: 1px solid $BrightBlue;
+        cursor: pointer;
+
+        &:focus {
+            background-color: $BrightBlue;
+        }
+    }
+
+    .toggle-p {
+        font-family: 'Josefin Sans', sans-serif;
+        width: 100%;
+        color: $lightmodetextHover;
+        cursor: pointer;
+        text-decoration: line-through;
+    }
+}
+
+
+@media screen and (max-width: 540px) {
+    .main-2 {
+        background-image: url(/assets/image/bg-mobile-light.jpg);
+
+        .todo__container {
+
+            .todo__creation {
+                width: 350px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 420px) {
+    .main-2 {
+
+        .todo__container {
+
+            .todo__header {
+                justify-content: center;
+                gap: 11rem;
+            }
+
+            .todo__creation {
+                width: 320px;
+            }
+
+            .todo__links {
+                font-size: 13px;
+            }
+        }
+    }
+}

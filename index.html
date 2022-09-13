@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="main.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Todo App</title>
+</head>
+
+<body>
+    <main class="main-1" id="main">
+        <div class="todo__container">
+
+            <div class="todo__header">
+                <h1>TODO</h1>
+                <img src="/assets/image/icon-moon.svg" alt="moon" class="moon">
+                <img src="/assets/image/icon-sun.svg" alt="sun" class="sun" style="display: none;">
+            </div>
+
+
+            <form class="todo__creation">
+                <button type="submit" class="button"><img src="/assets/image/icon-check.svg" alt="check"
+                        class="checkbtn"></button>
+                <input type="text" placeholder="Create a new todo..." class="todo__creation-input">
+            </form>
+
+            <div class="todo__main">
+            </div>
+
+            <div class="todo__completed" style="display: none;">
+            </div>
+
+            <div class="todo__links">
+                <p class="childleft">0 left</p>
+                <a href="#" id="all">All</a>
+                <a href="#">Active</a>
+                <a href="#" id="complete">Completed</a>
+                <p id="clear">Clear completed</p>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

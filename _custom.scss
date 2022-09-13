@@ -1,0 +1,36 @@
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+    text-decoration: none;
+    height: 100%;
+}
+
+
+
+
+// Primary
+$BrightBlue: hsl(220, 98%, 61%);
+$CheckBackground: linear-gradient(to right, rgb(99, 206, 241), rgb(195, 111, 250));
+
+
+
+
+// Light Theme
+
+$lightmodeBg: hsl(0, 0%, 98%);
+$lightmodeFormbg: hsl(236, 33%, 92%);
+$Lightmodetext: hsl(233, 11%, 84%);
+$lightmodetextHover: hsl(236, 9%, 61%);
+$lightmodetext2: hsl(235, 19%, 35%);
+
+// Dark Theme
+
+$darkmodebg: hsl(235, 21%, 11%);
+$darkmodeFormbg: hsl(235, 24%, 19%);
+$darkmodetext: hsl(234, 39%, 85%);
+$darkmodetextHover: hsl(236, 33%, 92%);
+$DarkGrayishBlue: hsl(234, 11%, 52%);
+$VeryDarkGrayishBlue: hsl(233, 14%, 35%);
+$VeryDarkGrayishBlue2: hsl(237, 14%, 26%);
